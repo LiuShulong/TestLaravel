@@ -7,12 +7,19 @@
  */
 
 namespace App\Http\Controllers\Service;
+
+use App\Service\AjaxResponse;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Entity\Member;
 
 class Test extends Controller
 {
+
+    public function getInfo(Request $request){
+        $response = new AjaxResponse();
+        return $response->success();
+    }
 
     public function add(Request $request){
         $member = new Member();

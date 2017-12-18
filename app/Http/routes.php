@@ -32,3 +32,5 @@ Route::post('register', 'View\MemberController@register');
 
 Route::post('add', 'Service\Test@add');
 Route::post('update', 'Service\Test@update');
+
+Route::get('get', 'Service\Test@getInfo');
